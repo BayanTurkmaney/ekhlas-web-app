@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% load static %}
+{% block carousal %}
+<!-- Carousel Start -->
+ <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+ <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+     <div class="carousel-inner">
+         <div class="carousel-item active">
+             <img class="w-100" src="{% static 'img/water.jpg' %}" alt="Image">
+             <div class="carousel-caption">
+                 <div class="container">
+                     <div class="row justify-content-center">
+                         <div class="col-lg-7">
+                             <h1 class="display-2 text-light mb-5 animated slideInDown">شركة إخلاص التعمير</h1>
+                             <!--a href="" class="btn btn-primary py-sm-3 px-sm-5">قراءة المزيد</a>
+                             <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">خدماتنا</a-->
+                             <p style="font-size:25px;">نقدم الأفضل دائماً بحرفية وإتقان لنكون الخيار الأول للعملاء وتستحوذ على ثقتهم وننال رضاهم</p>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="carousel-item">
+             <img class="w-100" src="{% static 'img/fom.jpg' %}" alt="Image">
+             <div class="carousel-caption">
+                 <div class="container">
+                     <div class="row justify-content-center">
+                         <div class="col-lg-7">
+                             <h1 class="display-2 text-light mb-5 animated slideInDown">شركة إخلاص التعمير</h1>
+                             <!--a href="" class="btn btn-primary py-sm-3 px-sm-5">قراءة المزيد</a>
+                             <a href="" class="btn btn-light py-sm-3 px-sm-5 ms-3">خدماتنا</a-->
+                             <p style="font-size:25px;"> الابتكار – الإخلاص في العمل – رضا العميل</p>
+
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+         data-bs-slide="prev">
+         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Previous</span>
+     </button>
+     <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+         data-bs-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="visually-hidden">Next</span>
+     </button>
+ </div>
+</div--> 
+<!-- Carousel End -->{% endblock carousal %}
+{% block content %}
+
+     <!-- Courses Start -->
+     <div class="container-xxl courses my-6 py-6 pb-0">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h6 class="text-primary text-uppercase mb-2" style="font-weight: bold; font-size: 25px;">خدماتنا</h6>
+                <h1 class="mb-4"  style="font-weight: bold; font-size: 20px;"> وتعمل إخلاص التعمير على توظيف إمكانياتها المادية والبشرية لمعالجة التحديات المتعلقة بالبناء المستدام، وجعل المساحات قادرة على التكيف مع ظروف التغير المناخي وعوامل الطقس من خلال توفير خدمات عزل متكاملة لقاعدة عملائها العريضة، بما في ذلك: </h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="courses-item d-flex  flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <h5 class="mb-3">العزل الحراري</h5>
+                            <p>حماية البناء من التقلبات المناخية وحرارة الشمس العالية في معظم شهور السنة في السعودية، واحتفاظ المبنى بدرجة الحرارة المناسبة لمدة طويلة دون الحاجة إلى تشغيل أجهزة التكييف... </p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" style="width:600px; height:250px;"  src="{% static 'img/tempreature.jpg' %}" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{% url 'temp_isol_details' %}">قراءة المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <h5 class="mb-3">العزل المائي</h5>
+                            <p>تحتاج جميع المنشآت إلى عزل مبانيها عزلاً تاماً من مياه الأمطار والرطوبة والمياه الجوفية والسطحية ورشحهما، التي تسبب مع الوقت أضراراً في المبنى قد تصل إلى انهيار أجزاء منه إذا ما أُهملت معالجتها</p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" style="width:600px; height:250px;" src="{% static 'img/water.jpg' %}" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{% url 'water_isol_details' %}">قراءة المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <h5 class="mb-3">العزل المطاطي</h5>
+                            <p>الحصول على طبقة عازلة تمتلك قدرة عالية على مقاومة المياه والعديد من التقلبات الجوية بالإضافة إلى حمايته من التسربات المختلفة توفرها لكم شركة إخلاص التعمير</p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" style="width:600px; height:250px;" src="{% static 'img/matate2.jpg' %}" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{% url 'matate_isol_details' %}">قراءة المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="courses-item d-flex  flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <h5 class="mb-3">العزل الإسمنتي</h5>
+                            <p>يعد العازل الإسمنتي من أقوى الطرق لمنع التسرب المائي، من الأسطح والخرسانات المجاورة للمياه، مثل المسابح 
+                                كما أن أعمال العزل الإسمنتي للقبو وخزانات المياه الموجودة في الأقبية أو الأسطح تمنع تسرب المياه إلى أساس البناء وإضعافه
+                                </p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" style="width:600px; height:250px;"  src="{% static 'img/esmant.jpeg' %}" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{% url 'esmante_isol_details' %}">قراءة المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <h5 class="mb-3">عزل الفوم</h5>
+                            <p>يعتبر نظام عزل الفوم من أحدث وأكفأ نظم العزل، فهو نظام عزل متكامل حرارياً ومائياً معاً. ويؤدي استخدام هذا النظام إلى الاستغناء عن الاستعانة بمواد أخرى للوصول إلى مستوى العزل المطلوب سواء حرارياً أو مائياً.</p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" style="width:600px; height:250px;"  src="{% static 'img/fom.jpg' %}" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{% url 'fom_isol_details' %}">قراءة المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="courses-item d-flex flex-column bg-white overflow-hidden h-100">
+                        <div class="text-center p-4 pt-0">
+                            <div class="d-inline-block bg-primary text-white fs-5 py-1 px-4 mb-4">$99</div>
+                            <h5 class="mb-3">عزل الأيبوكسي</h5>
+                            <p> إن أهم ما يميز إخلاص التعمير هو رغبتها الدائمة في تقديم كل ما هو جديد ومتين ولا يسبب أي أضرار للمباني وساكنيها، ويحقق نتائج مضمونة وفعالة بأقصر وقت    </p>
+                            <ol class="breadcrumb justify-content-center mb-0">
+                                <li class="breadcrumb-item small"><i class="fa fa-signal text-primary me-2"></i>Beginner</li>
+                                <li class="breadcrumb-item small"><i class="fa fa-calendar-alt text-primary me-2"></i>3 Week</li>
+                            </ol>
+                        </div>
+                        <div class="position-relative mt-auto">
+                            <img class="img-fluid" style="width:600px; height:250px;"  src="{% static 'img/epoxi.jpeg' %}" alt="">
+                            <div class="courses-overlay">
+                                <a class="btn btn-outline-primary border-2" href="{% url 'epoxi_isol_details' %}">قراءة المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Courses End -->
+{% endblock content %}

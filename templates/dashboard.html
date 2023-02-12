@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block carousal %}
+<!-- Carousel Start -->
+{% if user.groups.all.0.name == "user" %}
+<div>
+    Error Loading...
+</div>
+{% endif %}
+<!-- Carousel End -->{% endblock carousal %}
+{% block content %}
+
+<!-- START  PROJECT TABLE SECTION--> 
+{% if request.user.is_authenticated %}
+<div class="d-flex flex-row-reverse" style="margin-top:50px; margin-right:20px;">
+<h4 style="color:green;">{{request.user.username}}أهلاً بك  </h4>
+</div>
+{% if user.groups.all.0.name == "admin" %}
+<div class="d-flex flex-row-reverse align-items-center justify-content-between mb-4" style="margin:10px;">
+    {% comment %} {% if user.groups.all.0.name == "admin" or user.groups.all.0.name == "manager"  %} {% endcomment %}
+    <h6 class="mb-0">كل المشاريع</h6>
+    <a class="btn btn-primary btn-sm btn-block" href="{% url 'add_project'  %}">إنشاء مشروع</a>
+</div>
+<div  style="margin-right:20px; margin-left:20px;">
+    <div class="table-responsive bg-light">
+        <table class="table text-start align-middle table-bordered table-hover mb-0">
+            <thead>
+                <tr class="text-dark">
+                    <th scope="col"></th>
+                    <th scope="col" style="text-align:right">تاريخ النهاية</th>
+                    <th scope="col" style="text-align:right">تاريخ البداية</th>
+                    <th scope="col" style="text-align:right"> الشركة الهدف</th>
+                    <th scope="col" style="text-align:right">نوع العزل</th>
+                    <th scope="col" style="text-align:right">العنوان</th>
+                    <th scope="col"><!--input class="form-check-input" type="checkbox"-->#</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects  %}
+                <tr>
+                    <td style="text-align:right">
+                        
+                        {% comment %} {% if user.groups.all.0.name == "admin" or user.groups.all.0.name == "manager"  %} {% endcomment %}
+                      
+                        <a href="{% url 'delete_project' project.id %}" class="btn btn-sm text-light" style="padding:10px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16"  color="red" >
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
+                                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
+                            </svg>
+                            </a>
+                            <a href="{% url 'edit_project' project.id %}" style="padding:10px" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" color="green" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16" >
+                                    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                                </svg>
+                                </a>
+                                <a href="{% url 'view_project_detail' project.id %}" style="padding:10px" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16" color='blue'>
+                                        <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                        <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                                    </svg>
+                                    </a>
+                        {% comment %} {% endif %}  {% endcomment %}
+                    </td>
+                    <td style="text-align:right">{{project.end_date}}</td>
+                    <td style="text-align:right">{{project.start_date}}</td>
+                    <td style="text-align:right">{{project.target_company}}</td>
+                    <td style="text-align:right">{{project.service_type.title}}</td>
+                    <td style="text-align:right"><a href="{% url 'view_project_detail' project.id %}">{{project.title}}</a></td>
+                    <td style="text-align:right">{{project.id}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>  
+        </table>
+    </div>
+</div>
+{% endif %}
+{% else %}
+<h1>failed authenticated </h1>
+
+<!-- Service End -->
+ 
+{% endif %}
+
+<!-- END  PROJECT TABLE SECTION-->
+
+
+{% endblock content %}
