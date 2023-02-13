@@ -18,8 +18,23 @@
 {% if user.groups.all.0.name == "admin" %}
 <div class="d-flex flex-row-reverse align-items-center justify-content-between mb-4" style="margin:10px;">
     {% comment %} {% if user.groups.all.0.name == "admin" or user.groups.all.0.name == "manager"  %} {% endcomment %}
-    <h6 class="mb-0">كل المشاريع</h6>
-    <a class="btn btn-primary btn-sm btn-block" href="{% url 'add_project'  %}">إنشاء مشروع</a>
+    <div class="container ">
+        <div class="row">
+        
+          <div class="col-2" style="margin-left:0px;">
+            <a class="btn btn-primary btn-sm btn-block" href="{% url 'add_project'  %}">إنشاء مشروع</a>
+          </div>
+          <div class="col-2" style="margin-left:10px;">
+            <a class="btn btn-secondary btn-sm btn-block" href="{% url 'add_admin'  %}">إضافة آدمن </a>
+          </div>
+          <div class="col-8" style="margin-left:1100px;">
+            <h6 class="mb-0">كل المشاريع</h6>
+          </div>
+        </div>
+    </div>
+   
+   
+   
 </div>
 <div  style="margin-right:20px; margin-left:20px;">
     <div class="table-responsive bg-light">

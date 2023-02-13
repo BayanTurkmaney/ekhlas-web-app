@@ -1,0 +1,44 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+{% block stylesheet %}
+<style>
+    .borderless td, .borderless th {
+        border: none;
+    }
+</style>
+{% endblock stylesheet %}
+
+
+{% block content %}
+
+<!-- Form Start -->
+<div style="text-align:right;  margin-right:50px;  margin-top:30px;">
+    <h4 style="color:green;">title</h4>
+</div>
+<div class="d-flex flex-row-reverse" style="background-color:white; margin-right:80px;  margin-top:30px;">
+<form class="px-md-2" action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        <tbody>
+            <tr>
+                <td> {{form.username}}</td>
+                <td><h5>اسم المستخدم</h5></td>
+            </tr>
+            <tr>
+                <td> {{form.password1}}</td>
+                <td> <h5>كلمة المرور</h5></td>
+            </tr>
+            <tr>
+                <td> {{form.password2}}</td>
+                <td> <h5>تأكيد الكلمة</h5></td>
+            </tr>
+        </tbody>
+    </table>
+        <input class="submit-button" style="background-color:green;color:white;"  type="submit"  name=""> 
+    </form>    
+</div>
+
+    <!-- Form End -->
+{% endblock content %}

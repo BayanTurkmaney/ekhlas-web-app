@@ -88,9 +88,10 @@
             <div class="navbar-nav ms-auto p-4 p-lg-0 ">
                 {% if request.user.is_authenticated %}
                         <div class="d-flex flex-row-reverse" style="background-color:red; margin-right:450px; margin-top:10px; padding-right:20px; width:150px; height:30px;">
-                        <a href="{% url 'logout' %}"><h5 style="color:white;">تسجيل الخروج  </h5></a></div> 
-                        
-                        {% endif %}
+                        <a href="{% url 'logout' %}"><h5 style="color:white;">تسجيل الخروج  </h5></a>
+
+                    </div> 
+                     {% endif %}
                 <a href="" class="nav-item nav-link" style=" font-weight: bold; font-size: 20px;">تواصل معنا</a>
                 <a href="{% url 'projects' %}" class="nav-item nav-link" style=" font-weight: bold; font-size: 20px;">مشاريعنا</a>
                 <div class="nav-item dropdown">

@@ -125,6 +125,27 @@ def delete_project(request,project_id):
     return render(request,'alert.html')
 
 #users
+def add_admin_view(request):
+        # print('********************')
+        form=CreateUserForm()
+        if request.method=="POST":
+            # print(request.POST)
+            form=CreateUserForm(request.POST)
+            print(form)
+            if form.is_valid():
+                print('valid form')
+                user=form.save()
+                print(user)
+                group=Group.objects.get(name='admin')
+                user.groups.add(group)  
+                # username=request.POST["username"]
+                # messages.success(request,"Account was created successfully for "+username)
+                return redirect('dashboard')
+            else:
+                print(' not valid...')
+        context={'form':form}
+        return render(request,'add_admin.html',context)
+
 
 
 def signup(request):
