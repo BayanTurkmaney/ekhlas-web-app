@@ -126,7 +126,7 @@ def delete_project(request,project_id):
 
 #users
 def add_admin_view(request):
-        # print('********************')
+        print('********************')
         form=CreateUserForm()
         if request.method=="POST":
             # print(request.POST)
