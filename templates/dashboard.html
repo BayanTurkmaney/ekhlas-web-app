@@ -2,11 +2,7 @@
 {% load static %}
 {% block carousal %}
 <!-- Carousel Start -->
-{% if user.groups.all.0.name == "user" %}
-<div>
-    Error Loading...
-</div>
-{% endif %}
+
 <!-- Carousel End -->{% endblock carousal %}
 {% block content %}
 
@@ -15,7 +11,7 @@
 <div class="d-flex flex-row-reverse" style="margin-top:50px; margin-right:20px;">
 <h4 style="color:green;">{{request.user.username}}أهلاً بك  </h4>
 </div>
-{% if user.groups.all.0.name == "admin" %}
+{% if user.is_superuser == True %}
 <div class="d-flex flex-row-reverse align-items-center justify-content-between mb-4" style="margin:10px;">
     {% comment %} {% if user.groups.all.0.name == "admin" or user.groups.all.0.name == "manager"  %} {% endcomment %}
     <div class="container ">

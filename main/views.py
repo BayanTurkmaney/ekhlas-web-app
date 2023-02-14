@@ -135,9 +135,11 @@ def add_admin_view(request):
             if form.is_valid():
                 print('valid form')
                 user=form.save()
-                print(user)
-                group=Group.objects.get(name='admin')
-                user.groups.add(group)  
+                
+                user.is_superuser=True
+                user.save()
+                # group=Group.objects.get(name='admin')
+                # user.groups.add(group)  
                 # username=request.POST["username"]
                 # messages.success(request,"Account was created successfully for "+username)
                 return redirect('dashboard')
@@ -157,8 +159,8 @@ def signup(request):
             if form.is_valid():
                 user=form.save()
                 print(user)
-                group=Group.objects.get(name='users')
-                user.groups.add(group)  
+                user.is_superuser=True
+                user.save()
                 username=request.POST["username"]
                 messages.success(request,"Account was created successfully for "+username)
                 return redirect('login')

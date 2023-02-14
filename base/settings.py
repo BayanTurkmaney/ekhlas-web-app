@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#16($85b4fl243+b*wgcbfckcdjm!erq45&n1vr^yv9@=)o2v&
 DEBUG = True
 #.vercel.app
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh','127.0.0.1']
 
 
 # Application definition
@@ -77,19 +77,19 @@ WSGI_APPLICATION = 'base.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'ekhlas',
-#         'USER':'bana',
-#         'PASSWORD':'pos123',
-#         'HOST':'localhost',
-#         'PORT':'5432',
-#         'CHARSET': 'utf8',
-#         'COLLATION': 'utf8_general_ci'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'ekhlasaltameer',
+        'USER':'bana',
+        'PASSWORD':'pos123',
+        # 'HOST':'.vercel.app',
+        # 'PORT':'5432',
+        # 'CHARSET': 'utf8',
+        # 'COLLATION': 'utf8_general_ci'
 
-#     }
-# }
+    }
+}
 
 # DATABASES = {
     # 'default': {
@@ -101,12 +101,12 @@ WSGI_APPLICATION = 'base.wsgi.application'
         # 'PORT':'5432',
 # }
 # }
-DATABASES = {
+# DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
-}
+# }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -141,10 +141,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
-STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-# STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'),]
+# STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'),]
 STATIC_URL = '/static/'
 
 # MEDIA_URL = '/media/'
