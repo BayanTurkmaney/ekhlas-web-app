@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-#16($85b4fl243+b*wgcbfckcdjm!erq45&n1vr^yv9@=)o2v&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #.vercel.app
-ALLOWED_HOSTS = ['.vercel.app']
+
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 
 # Application definition
@@ -141,7 +142,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-django_heroku.settings(locals())
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'static'),]
 # MEDIA_URL = '/media/'
 MEIDA_ROOT ='/media/'
