@@ -28,7 +28,6 @@ idna==3.3
 iso8601==1.0.2
 Pillow==9.1.1
 platformdirs==2.5.2
-psycopg2==2.9.4
 psycopg2-binary==2.9.3
 pycparser==2.21
 pydantic==1.9.0
