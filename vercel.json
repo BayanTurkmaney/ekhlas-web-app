@@ -6,7 +6,7 @@
 
     {
 
-    "src": "ekhlas-web-app/base/wsgi.py",
+    "src": "base/wsgi.py",
 
     "use": "@vercel/python",
 
@@ -44,7 +44,7 @@
 
     "src": "/(.*)",
 
-    "dest": "ekhlas-web-app/base/wsgi.py"
+    "dest": "base/wsgi.py"
 
     }
 
