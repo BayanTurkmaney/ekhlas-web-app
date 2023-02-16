@@ -83,10 +83,10 @@ DATABASES = {
         'NAME': 'ekhlasaltameer',
         'USER':'bana',
         'PASSWORD':'pos123',
-        # 'HOST':'.vercel.app',
-        # 'PORT':'5432',
-        # 'CHARSET': 'utf8',
-        # 'COLLATION': 'utf8_general_ci'
+        # 'HOST':'https://ekhlas-web-app-production.up.railway.app/',
+        'PORT':'5432',
+        'CHARSET': 'utf8',
+        'COLLATION': 'utf8_general_ci'
 
     }
 }
