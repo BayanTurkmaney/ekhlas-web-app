@@ -79,14 +79,12 @@ WSGI_APPLICATION = 'base.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ekhlasaltameer',
-        'USER':'bana',
-        'PASSWORD':'pos123',
-        'HOST':'https://ekhlas-web-app-production.up.railway.app/',
-        'PORT':'5432',
-        'CHARSET': 'utf8',
-        'COLLATION': 'utf8_general_ci'
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER':'postgres',
+        'PASSWORD':'xhdzhRtOXi90Su9XoTYj',
+        'HOST':'containers-us-west-67.railway.app',
+        'PORT':'7121',
 
     }
 }
